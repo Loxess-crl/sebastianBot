@@ -2,7 +2,7 @@ import { Client, Events } from 'discord.js';
 import { prefixCommands } from '../commands';
 import { getRandomNumber } from '../utils/util-functions';
 
-const prefix = 'x!';
+const prefix = 's!';
 
 export const onMessageCreate = (client: Client) => {
   client.on(Events.MessageCreate, async (message) => {
