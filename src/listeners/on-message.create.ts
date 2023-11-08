@@ -1,6 +1,7 @@
 import { Client, Events } from 'discord.js';
 import { prefixCommands } from '../commands';
 import { getRandomNumber } from '../utils/util-functions';
+import { BOT_ID } from '../config';
 
 const prefix = 's!';
 
@@ -10,7 +11,7 @@ export const onMessageCreate = (client: Client) => {
 
     const mencionado = message.mentions.users.first();
 
-    if (mencionado && mencionado.id === 'idsebas') {
+    if (mencionado && mencionado.id === BOT_ID) {
       const respuestas = [
         'Q CHUCHA QUIERES MONGOL DE MRD',
         'tu vieja',
