@@ -1,4 +1,4 @@
 DISPLAY_NAME=SebastianBot
-MAIN=main.ts
+MAIN=src/main.ts
 MEMORY=100
 VERSION=recommended
