@@ -5,7 +5,7 @@ import { BOT_ID } from '../config';
 
 const prefix = 's!';
 
-export const onMessageCreate = (client: Client) => {
+export const onMessageCreate = async (client: Client) => {
   client.on(Events.MessageCreate, async (message) => {
     if (message.author.bot) return;
 
@@ -27,7 +27,9 @@ export const onMessageCreate = (client: Client) => {
         'fue mi pene',
       ];
 
-      message.channel.send(respuestas[getRandomNumber(0, respuestas.length)]);
+      await message.reply(
+        respuestas[getRandomNumber(0, respuestas.length - 1)]
+      );
       return;
     }
 
@@ -47,7 +49,7 @@ export const onMessageCreate = (client: Client) => {
           255
         )}.${getRandomNumber(0, 255)}.${getRandomNumber(10, 100)}`,
       ];
-      message.channel.send(responses[getRandomNumber(0, responses.length)]);
+      message.channel.send(responses[getRandomNumber(0, responses.length - 1)]);
       return;
     }
 

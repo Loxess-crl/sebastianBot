@@ -1,6 +1,6 @@
 import { ActivityType, Client, Events, PresenceUpdateStatus } from 'discord.js';
 
-export const onReady = (client: Client) => {
+export const onReady = async (client: Client) => {
   const presence = () => {
     client.user?.setPresence({
       status: PresenceUpdateStatus.Online,
@@ -8,7 +8,7 @@ export const onReady = (client: Client) => {
     });
   };
   client.on(Events.ClientReady, () => {
-    console.log(`Logged in as ${client.user?.username}!`);
+    console.log(`Entro como ${client.user?.username}!`);
 
     presence();
   });
