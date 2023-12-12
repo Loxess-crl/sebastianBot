@@ -2,6 +2,7 @@ import { Command } from '../interfaces/command.interface';
 import { animeCommand } from './anime';
 import { convertCommand } from './convert';
 import { decirCommand } from './decir';
+import { helpCommand } from './help';
 import { putosCommand } from './putos';
 import { ranitaCommand } from './ranita';
 import { robotCommand } from './robot';
@@ -13,4 +14,5 @@ export const prefixCommands: Command[] = [
   putosCommand,
   ranitaCommand,
   robotCommand,
+  helpCommand,
 ];

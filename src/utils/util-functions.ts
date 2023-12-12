@@ -1,3 +1,4 @@
+import { Colors } from 'discord.js';
 import { months } from '../constants/months';
 
 export const getRandomNumber = (min: number, max: number) => {
@@ -22,4 +23,10 @@ export const convertDateToString = (date: Date | string) => {
   const month = months[date.getMonth()];
   const year = date.getFullYear();
   return `${day} de ${month} del ${year}`;
+};
+
+export const getRandomColor = () => {
+  const random = getRandomNumber(0, Object.values(Colors).length - 1);
+  const color = Object.values(Colors)[random];
+  return color;
 };
