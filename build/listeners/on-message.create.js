@@ -69,6 +69,11 @@ const onMessageCreate = (client) => __awaiter(void 0, void 0, void 0, function* 
             message.channel.send('axaim');
             return;
         }
+        if (message.content.toLowerCase() === `${prefix}teleton`) {
+            message.channel.send(`🤸
+      🦽🏌️`);
+            return;
+        }
         if (!message.content.toLowerCase().startsWith(prefix))
             return;
         const commandBody = message.content.slice(prefix.length);
