@@ -3,7 +3,7 @@ import { Command } from '../interfaces/command.interface';
 import axios from 'axios';
 import { Colors } from 'discord.js';
 import { animeAPIJikanResponse } from '../interfaces/api-jikan.interface';
-import { convertDateToString, formatDate } from '../utils/util-functions';
+import { convertDateToString } from '../utils/util-functions';
 
 export const animeCommand: Command = {
   name: 'anime',

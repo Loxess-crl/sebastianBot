@@ -1,4 +1,4 @@
-import { Client, Colors, Message } from 'discord.js';
+import { Colors } from 'discord.js';
 import { Command } from '../interfaces/command.interface';
 import { EmbedBuilder } from '@discordjs/builders';
 
