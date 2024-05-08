@@ -1,6 +1,7 @@
 import { Client, GatewayIntentBits } from 'discord.js';
 import { onMessageCreate, onReady } from './listeners';
 import { TOKEN } from './config';
+import { openAiChat } from './listeners/on-chatbot';
 
 const client = new Client({
   intents: [
@@ -16,6 +17,7 @@ const client = new Client({
   ],
 });
 
+openAiChat(client);
 onReady(client);
 onMessageCreate(client);
 
