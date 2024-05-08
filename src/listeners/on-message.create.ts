@@ -72,7 +72,13 @@ export const onMessageCreate = async (client: Client) => {
       return;
     }
 
-    if (!message.content.startsWith(prefix)) return;
+    if (message.content.toLowerCase() === `${prefix}teleton`) {
+      message.channel.send(`🤸
+      🦽🏌️`);
+      return;
+    }
+
+    if (!message.content.toLowerCase().startsWith(prefix)) return;
 
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
