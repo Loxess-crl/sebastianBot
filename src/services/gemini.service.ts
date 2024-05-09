@@ -43,4 +43,8 @@ export class GeminiChat {
     messagesGemini.push({ role: 'user', content: contentUser });
     messagesGemini.push({ role: 'model', content: contentModel });
   }
+
+  resetConversationGemini() {
+    messagesGemini.length = 0;
+  }
 }

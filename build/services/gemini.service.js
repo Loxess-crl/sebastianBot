@@ -54,5 +54,8 @@ class GeminiChat {
             messages_1.messagesGemini.push({ role: 'model', content: contentModel });
         });
     }
+    resetConversationGemini() {
+        messages_1.messagesGemini.length = 0;
+    }
 }
 exports.GeminiChat = GeminiChat;

@@ -14,6 +14,12 @@ export const openAiChat = async (client: Client) => {
     const mention = message.mentions.members.first();
 
     if (mention && mention.user.id === client.user?.id) {
+      if (message.content === `<@${client.user.id}> reset`) {
+        const GeminiChatService = new GeminiChat();
+        GeminiChatService.resetConversationGemini();
+        await message.reply('Conversación reiniciada');
+        return;
+      }
       if (message.content.trim() === `<@${client.user.id}>`) {
         const respuestas = [
           'Q CHUCHA QUIERES MONGOL DE MRD',
